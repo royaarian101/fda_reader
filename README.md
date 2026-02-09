@@ -1,22 +1,23 @@
-# OCT FDA Visualisation using oct_converter
+# Topcon OCT FDA Visualisation using oct_converter
 
 ## Overview
-This project uses the **oct_converter** library to inspect and visualise OCT data stored in FDA/FDS files.
+This project demonstrates the use of **oct_converter** to inspect and visualise **Topcon OCT data**
+stored in FDA/FDS containers.
 
-The workflow includes:
-- Visualisation of OCT volumes (B-scans)
-- Display of retinal layer boundaries (when available)
-- Visualisation of fundus / SLO images
+The workflow focuses on:
+- Visualising Topcon OCT volumes (B-scans)
+- Displaying retinal layer boundaries when available
+- Visualising fundus / SLO images
 - Printing key patient, device, and acquisition metadata
 
-The focus is on **data inspection and quality control**, not full vendor-level decoding.
+The code is intended for **data inspection and quality control**, not full proprietary decoding.
 
 ---
 
 ## Features
-- OCT volume shape and number of B-scans
-- Fundus image size and resolution
-- Selected metadata: patient ID, laterality, device model, bits per pixel, acquisition date, and pixel spacing
+- OCT volume geometry and number of B-scans
+- Fundus / SLO image size and data type
+- Selected metadata: patient ID, laterality, device model (3D OCT-1000 series), bits per pixel, acquisition date, and pixel spacing
 
 ---
 
@@ -29,7 +30,7 @@ The focus is on **data inspection and quality control**, not full vendor-level d
 ---
 
 ## Notes
-- FDA/FDS files are vendor-dependent and may contain partial metadata.
-- Not all files include fundus images or segmentation data.
-- The code safely handles missing metadata fields.
+- Topcon FDA files are vendor-dependent and may expose limited metadata.
+- Not all Topcon files include fundus or segmentation information.
+- The implementation safely handles missing or partial metadata.
 
